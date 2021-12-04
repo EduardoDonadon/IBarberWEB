@@ -24,7 +24,7 @@ interface LocationProps {
 
 interface UserFormData {
   name: string;
-  cpf: number;
+  cpf: string;
   email: string;
   email_confirm?: string;
   password: string;
@@ -66,8 +66,6 @@ export const RegisterUserInfo: React.FC = () => {
 
         delete data.email_confirm;
         delete data.password_confirm;
-
-        data.cpf = Number(data.cpf);
         
         addUserInfo(data);
 
@@ -110,7 +108,6 @@ export const RegisterUserInfo: React.FC = () => {
             />
             <Input
               name="cpf"
-              type="number"
               label="CPF"
               placeholder="97846531255"
             />

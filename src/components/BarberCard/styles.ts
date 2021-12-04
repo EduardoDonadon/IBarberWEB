@@ -30,12 +30,4 @@ export const BarberInfoContainer = styled.div`
     font-size: 18px;
     color: #fff;
   }
-
-  > span {
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    color: #fff;
-
-    overflow: hidden;
-  }
 `;

@@ -124,11 +124,7 @@ export const Profile: React.FC = () => {
             </AvatarInput>
             <div>
               <h2>{user.name}</h2>
-              <h3>Lauro de Freitas - BA</h3>
-              <span>
-                Sou barbeiro desde 2017, apaixonado
-                em cortes de cabelo desde meus 14 anos.
-              </span>
+              <h3>{user.address.city} - {user.address.state}</h3>
             </div>
           </UserInfo>
           <Calendar>

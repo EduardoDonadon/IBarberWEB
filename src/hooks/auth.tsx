@@ -7,6 +7,10 @@ interface User {
   email: string;
   barber: boolean;
   avatar_url: string;
+  address: {
+    city: string;
+    state: string;
+  }
 }
 
 interface AuthState {

@@ -4,7 +4,7 @@ import { api } from '../services/api';
 
 interface UserFormData {
   name: string;
-  cpf: number;
+  cpf: string;
   email: string;
   password: string;
   barber: boolean;

@@ -96,11 +96,6 @@ export const UserInfo = styled.div`
     font-size: 16px;
     margin-bottom: 8px;
   }
-
-  span {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-  }
 `;
 
 export const Calendar = styled.div`

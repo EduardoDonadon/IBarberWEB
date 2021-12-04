@@ -46,8 +46,11 @@ export const ListSchedules: React.FC = () => {
   const location = useLocation<LocationProps>();
   const [schedules, setSchedules] = useState<ScheduleData[]>([]);
   const [cuts, setCuts] = useState<CutData[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const handleCreateAppointment = useCallback(async (scheduleId: string) => {
+    setLoading(true);
+
     await api.post('appointments', {
       client_id: user.id,
       schedule_id: scheduleId
@@ -55,6 +58,7 @@ export const ListSchedules: React.FC = () => {
 
     addToast({title: "Agendamento realizado."})
 
+    setLoading(false);
     history.push('appointments');
   }, [user.id, addToast, history])
 
@@ -110,7 +114,7 @@ export const ListSchedules: React.FC = () => {
                       <h2>Dia: {schedule.formatted_date}</h2>
                       <h2>Horário: {schedule.hour}:{schedule.minutes}</h2>
                     </div>
-                    <Button text="Marcar" onClick={() => handleCreateAppointment(schedule.id)}/>
+                    <Button text="Marcar" loading={loading} onClick={() => handleCreateAppointment(schedule.id)}/>
                   </ScheduleItem>
               ))}
             </SchedulesList>

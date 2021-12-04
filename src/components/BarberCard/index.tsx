@@ -15,6 +15,10 @@ export interface BarberData {
   id: string;
   name: string;
   avatar_url: string;
+  address: {
+    city: string;
+    state: string;
+  }
 }
 
 interface Props {
@@ -38,11 +42,7 @@ export const BarberCard: React.FC<Props> = ({ data }) => {
       </Avatar>
       <BarberInfoContainer>
         <h2>{data.name}</h2>
-        <h3>Salvador - BA</h3>
-        <span>
-          Sou barbeiro desde 2017, apaixonado
-          em cortes de cabelo desde meus 14 anos.
-        </span>
+        <h3>{data.address.city} - {data.address.state}</h3>
         <Button text="Escolher" onClick={handleChooseButton}/>
       </BarberInfoContainer>
     </Container>
