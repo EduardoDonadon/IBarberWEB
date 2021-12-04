@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
+import insideBackground from '../../../assets/insideBackground.png';
+
+
 export const Container = styled.div`
-  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: url(${insideBackground}) center;
 `;
 
 export const Content = styled.div`
@@ -25,7 +28,7 @@ export const ListContainer = styled.div`
   h1 {
     font-family: "Roboto", sans-serif;
     font-size: 32px;
-    color: #000;
+    color: #fff;
     margin-bottom: 18px;
   }
 `;
