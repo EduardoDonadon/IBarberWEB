@@ -12,7 +12,7 @@ Sistema de conexão entre barbeiros e clientes, desenvolvido durante a matéria 
 
 ## Instalação e Utilização
 Requisitos
-- Ter essa [API](https://github.com/EduardoDonadon/GoBarber-API) instalada e rodando 
+- Ter essa [API](https://github.com/EduardoDonadon/IBarberAPI) instalada e rodando 
 
 Clonar o projeto
 
